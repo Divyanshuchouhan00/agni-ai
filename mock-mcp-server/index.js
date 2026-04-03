@@ -375,10 +375,10 @@ app.get('/health', (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = Number(process.env.PORT) || 3001;
 
 app.listen(PORT, "0.0.0.0", () => {
-    console.log(`\nAGNI AI MCP Server running on port ${PORT}`);
+    console.log(`\nServer running on port ${PORT}`);
     console.log(`MCP Endpoint: POST /mcp`);
     console.log(`Model: ${DEFAULT_MODEL}`);
     console.log(`Tools: ${tools.length} registered\n`);
