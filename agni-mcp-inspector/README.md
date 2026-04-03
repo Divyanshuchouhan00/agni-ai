@@ -36,7 +36,7 @@ cd mock-mcp-server
 npm install
 npm start
 ```
-*The mock server runs on `http://localhost:3001` and listens at the `/mcp` endpoint.*
+*The app uses the internal `/api/mcp` proxy route to reach the MCP backend.*
 
 ### 2. Run AGNI MCP Inspector
 
@@ -50,7 +50,7 @@ npm run dev
 ### 3. Usage Guide
 
 1. Open your browser to `http://localhost:3000`.
-2. In the top connection bar, enter your MCP server URL (e.g., `http://localhost:3001/mcp`).
+2. The app connects through the built-in `/api/mcp` proxy route.
 3. Click "Connect". 
 4. The sidebar will populate with available tools, resources, and prompts. Select a tool to auto-generate the JSON arguments template and execute.
 
@@ -58,3 +58,4 @@ npm run dev
 - **Frontend**: Next.js (App Router), React, Tailwind CSS
 - **Icons**: Lucide React
 - **Backend/Proxy**: Node.js, Next API Routes
+

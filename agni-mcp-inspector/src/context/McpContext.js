@@ -6,7 +6,7 @@ import { useTools } from "@/hooks/useTools";
 import { useMcpClient } from "@/hooks/useMcpClient";
 
 const McpContext = createContext();
-const MCP_URL = "http://localhost:3001/mcp";
+const MCP_URL = "/api/mcp";
 
 const SETTINGS_KEY = "agni_v5_settings";
 const GROQ_KEY_STORAGE = "agni_groq_key";
@@ -257,3 +257,4 @@ export function McpProvider({ children }) {
 export function useMcp() {
     return useContext(McpContext);
 }
+
