@@ -375,6 +375,10 @@ app.get('/health', (req, res) => {
     });
 });
 
+app.get("/", (req, res) => {
+    res.json({ status: "ok" });
+});
+
 const PORT = Number(process.env.PORT) || 3001;
 
 app.listen(PORT, "0.0.0.0", () => {
