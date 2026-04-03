@@ -189,7 +189,10 @@ NEXT_PUBLIC_MCP_URL=/api/mcp
 
 ## 📸 Screenshots
 
-> Add screenshots here (UI, tools, output, etc.)
+![Dashboard](./assets/Screenshot1.png)
+![Agentmode](./assets/Screenshot2.png)
+![Features](./assets/Screenshot3.png)
+![APIsettings](./assets/Screenshot4.png)
 
 ---
 
