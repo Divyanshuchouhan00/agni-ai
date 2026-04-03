@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 3001;
+//const PORT = 3001;
 const DEFAULT_MODEL = 'llama-3.3-70b-versatile';
 const GROQ_BASE_URL = 'https://api.groq.com/openai/v1';
 function createGroqClient(apiKey) {
@@ -375,9 +375,11 @@ app.get('/health', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`\nAGNI AI MCP Server running on http://localhost:${PORT}`);
-    console.log(`MCP Endpoint: POST http://localhost:${PORT}/mcp`);
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`\nAGNI AI MCP Server running on port ${PORT}`);
+    console.log(`MCP Endpoint: POST /mcp`);
     console.log(`Model: ${DEFAULT_MODEL}`);
     console.log(`Tools: ${tools.length} registered\n`);
 });
